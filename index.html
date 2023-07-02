@@ -1,1 +1,49 @@
-Hello World
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Project</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="data-and-education-final-project">Data and Education Final Project</h1>
+<h2 id="essential-questions">Essential Questions</h2>
+<ul>
+<li>How do schools of similar backgrounds stack against each other</li>
+<li>Does the difference in proficient scores between economically advantaged and disadvantaged schools track across different counties?</li>
+<li>Is there any correlation between proficient scores and how much the districts spend?</li>
+</ul>
+<h2 id="the-data">The Data</h2>
+<p>First I used the NYSED Report Card Data 2021-2022. The link for this data can be found <a href="https://data.nysed.gov/downloads.php">here.</a> There was a massive amount of data to look through here and I had to figure out what I wanted to learn from this data. I wanted to compare economically disadvantaged school districts to the more economically wealthy districts. I grabbed one of each from Westchester county using data from <a href="https://www.usnews.com/education/k12">US News.</a> This brought me to the Mount Vernon School District and the Yorktown Central School District. I then found similarly matched districts in Erie County, West Seneca Central School District and Orchard Park Central School District.</p>
+<p>The NYSED Report Card Data 2021-2022 excel file had a lot of content. I wanted to focus on just one type of test, so I went with ELA, a test that is given to all testing grades. I edited the excel file to use only the ELA sheet, so that it wouldn’t take too long for it to be read in python. The sheet can be found <a href="https://docs.google.com/spreadsheets/d/176LDJTJu84UQm3fImoYMWzMjoldTVuAr/edit?usp=sharing&amp;ouid=105226497987281059617&amp;rtpof=true&amp;sd=true">here</a>. With the help of python, I began trimming the dataset to fit what I was looking for. As someone with experience and focus in elementary education, I trimmed all data what wasn’t ELA3, ELA4, and ELA5. This way I can focus on the scores of the elementary students in the districts I was studying.</p>
+<p>Unfortunately this data did not contain any financial data for the districts. Using <a href="https://openbudget.ny.gov/sft/sft-districts.html">this New York State government site</a>, I was able to search for any district in the state and receive a table outlining their funding. I took each table in made one excel sheet with the data of the 4 districts I wanted to analyze. That sheet can be found <a href="https://docs.google.com/spreadsheets/d/1pKx1jyg1rqClxvgSAlImf8IeezuHxjJM/edit?usp=sharing&amp;ouid=105226497987281059617&amp;rtpof=true&amp;sd=true">here</a>.</p>
+<h2 id="the-code-and-visualizations">The Code and Visualizations</h2>
+<p>I sliced the data frame so that it would only display the information I intended on working with. In this case I wanted the information regarding the 4 schools and the All Students results for ELA3, ELA4, and ELA 5. Which brought me to this table.<br>
+<img src="https://i.imgur.com/uvn6wx2.png" alt="enter image description here"><br>
+I wanted to analyze these school performances based on elementary schools as a whole. So this would require me to combine the 3 grades for each school. I would group the data by the ENTITY_NAME in order to sum up the values and as previously stated would hard code the ENTITY_CD back in the table.<br>
+<img src="https://i.imgur.com/quxUGFR.png" alt="enter image description here"><br>
+With this I then created bar graphs to display the differences between proficient score percentage.<br>
+The two Westchester county schools:<br>
+<img src="https://i.imgur.com/2XApE6f.png" alt="enter image description here"></p>
+<p>The two Erie county schools:<br>
+<img src="https://i.imgur.com/5HKTQG7.png" alt="enter image description here"></p>
+<p>I also wanted to see where financials came into play here, and so I merged each district’s total spending in the data frame:<br>
+<img src="https://i.imgur.com/7BMHI3G.png" alt="enter image description here"></p>
+<p>To better visualize this data I created this pie chart to help compare the total spending across the two schools:<br>
+<img src="https://i.imgur.com/dkSm1P9.png" alt="enter image description here"></p>
+<h2 id="findings">Findings</h2>
+<p>I took two Westchester county districts and then found two comparable districts from another New York county, in this case Erie County. I wanted to see if the difference in proficient scores between two schools would be similar across different counties.  When looking at the bar graph visualizations you can see that the gap between the two schools is similar for each graph. What this tells me is that across different counties, the gap in scores between the predominantly wealth districts and economically disadvantaged districts is the same. It seems that the county the district is in does not seem to make that much of a difference in how students score on these assessments.</p>
+<p>Using financial data was also important here. All of these districts have similar totals in terms of Total Spending, with the exception of Mount Vernon, who greatly exceeds these three. Despite this high amount of spending, of the three they have the lowest proficiency percentage. Perhaps this implies that there isn’t a correlation between performance and spending.</p>
+<h2 id="reflection">Reflection</h2>
+<p>It took me a while to figure out what I wanted to learn from the data. I wanted to look into data that had some form of interest and connection to what I do. This is what led me towards focusing on the elementary data, as that is where I currently work and the field I plan on continuing my career in.<br>
+I could have used more than just 4 schools for this project, and possibly focused on some of the more individual factors, instead of just using the All Students rows. Given my experience in this type of work, I didn’t want to get too over my head and wanted to keep it relatively contained. If I were to continue this work I would definitely look into more school districts and try to find other factors that may cause the varying values in proficiency percentage across the state. However, it was very interesting to be able to create visualizations that would help answer or further explain my inquires about the data.</p>
+<blockquote>
+<p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
+</blockquote>
+</div>
+</body>
+
+</html>
